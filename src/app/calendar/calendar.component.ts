@@ -476,7 +476,10 @@ export class CalendarComponent implements AfterViewInit {
   }
   console.log(modal.result)
 this.http.post(this.serverAddress+`:8282/bookings/book`,modal.result).subscribe((res)=> {
-  console.log(res)
+  console.log(res),
+  (error: any) => {
+          alert(error); // Emit any errors
+        }
 })
 }
 

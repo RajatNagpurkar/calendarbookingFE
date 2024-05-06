@@ -24,7 +24,7 @@ export class DataService {
    
     // simulating an HTTP request
     return new Observable<any[]>((observer) => {
-      this.http.get("http://localhost:8282/bookings").subscribe(
+      this.http.get("http://10.0.120.113").subscribe(
         (data: any) => {
           const modifiedData = data.map((event: any) => {
             return {
